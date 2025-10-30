@@ -1,0 +1,44 @@
+﻿@page
+@model PortfolioApp.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<section class="contact-header">
+    <h1>¡Hablemos!</h1>
+    <p>Si tenés una idea, proyecto o simplemente querés saludar, completá el formulario o escribime directamente.</p>
+</section>
+
+<section class="contact-info">
+    <div class="info-card">
+        <h3>📧 Correo</h3>
+        <p><a href="nicopazmalizia@gmail.com">nicopazmalizia@gmail.com</a></p>
+    </div>
+    <div class="info-card">
+        <h3>💼 LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/nicopazz" target="_blank">linkedin.com/in/nicopazz</a></p>
+    </div>
+    <div class="info-card">
+        <h3>💻 GitHub</h3>
+        <p><a href="https://github.com/nicopazz" target="_blank">github.com/nicopazz</a></p>
+    </div>
+</section>
+
+<section class="contact-form">
+    <h2>Enviame un mensaje</h2>
+    <form method="post" asp-action="SendMessage">
+        <div>
+            <label>Nombre</label>
+            <input type="text" name="Nombre" required />
+        </div>
+        <div>
+            <label>Correo</label>
+            <input type="email" name="Email" required />
+        </div>
+        <div>
+            <label>Mensaje</label>
+            <textarea name="Mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</section>

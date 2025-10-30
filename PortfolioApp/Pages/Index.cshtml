@@ -1,0 +1,92 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>¡Hola! Soy <span>Nicolás</span></h1>
+        <p>Desarrollador Full Stack MERN & estudiante de la Tecnicatura Universitaria en Programación. Me apasiona crear soluciones web modernas y funcionales.</p>
+        <a href="#contacto" class="btn-primary">Contactame</a>
+    </div>
+    <div class="hero-img">
+        <img src="~/images/profile.png" alt="Foto de perfil">
+
+    </div>
+</section>
+
+<section id="skills" class="skills-section">
+    <h2>Lenguajes y Tecnologías</h2>
+
+    <div class="skills-list">
+        @foreach (var skill in Model.Skills)
+        {
+            <div class="skill-card">
+                <img src="@skill.Image" alt="@skill.Name" class="skill-icon" />
+                <h3>@skill.Name</h3>
+            </div>
+        }
+    </div>
+</section>
+
+
+
+<section id="proyectos" class="projects">
+    <h2>Proyectos Destacados</h2>
+
+    <div class="project-list">
+        @foreach (var project in Model.Projects)
+        {
+            <div class="project-card">
+                <h3>@project.Title</h3>
+                <p>@project.Description</p>
+                <img src="@project.Image" class="card-img-top" alt="@project.Title" />
+                <div class="button-group">
+                    <a href="@project.Url" target="_blank" class=" btn-primary">Página</a>
+                    <a href="@project.Repository" target="_blank" class=" btn-primary">Repositorio</a>
+                </div>
+                
+            </div>
+        }
+    </div>
+</section>
+
+
+
+<section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>Si querés hablar sobre un proyecto o colaborar, completá el formulario o escribime directamente.</p>
+
+    <div class="contact-info">
+        <div class="info-card">
+            <h3>📧 Correo</h3>
+            <p><a href="mailto:nicopazmalizia@gmail.com">nicopazmalizia@gmail.com</a></p>
+        </div>
+        <div class="info-card">
+            <h3>💼 LinkedIn</h3>
+            <p><a href="https://linkedin.com/in/nicopazz" target="_blank">linkedin.com/in/nicopazz</a></p>
+        </div>
+        <div class="info-card">
+            <h3>💻 GitHub</h3>
+            <p><a href="https://github.com/nicopazz" target="_blank">github.com/nicopazz</a></p>
+        </div>
+    </div>
+
+    <form method="post" asp-action="SendMessage">
+        <div>
+            <label>Nombre</label>
+            <input type="text" name="Nombre" required />
+        </div>
+        <div>
+            <label>Correo</label>
+            <input type="email" name="Email" required />
+        </div>
+        <div>
+            <label>Mensaje</label>
+            <textarea name="Mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+</section>
+
