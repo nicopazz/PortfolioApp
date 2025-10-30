@@ -52,7 +52,9 @@ namespace PortfolioApp.Pages
             new SkillItem { Name="SQL", Image="/images/sqlimg.png"},
             new SkillItem { Name="Mongo", Image="/images/mongoimg.png"},
             new SkillItem { Name="GIT", Image="/images/gitimg.png"},
-            new SkillItem { Name="Postman", Image="/images/postmanimg.png"}
+            new SkillItem { Name="Postman", Image="/images/postmanimg.png"},
+            new SkillItem { Name="Visual Studio", Image="/images/visualstudioimg.png"},
+            new SkillItem { Name="VS Code", Image="/images/vscodeimg.png"}
             };
         }
     }
