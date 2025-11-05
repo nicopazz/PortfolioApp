@@ -157,7 +157,7 @@ body {
 }
 
     .hero-img img {
-        width: 550px; /* 🔹 más grande */
+        width: 400px; /* 🔹 más grande */
         border-radius: 20px; /* 🔹 más cuadrada como en Azure */
         box-shadow: 0 0 40px rgba(114, 9, 183, 0.5);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
